@@ -26,6 +26,7 @@ public class Gate : MonoBehaviour
             {
                 playerModifier.AddWidth(_value);
             }
+            Destroy(gameObject);
         }
     }
 }
