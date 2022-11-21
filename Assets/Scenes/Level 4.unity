@@ -2588,11 +2588,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Finish
       objectReference: {fileID: 0}
-    - target: {fileID: 4234778585407198586, guid: 0b868bc3a0c54ec4ca935ff6f5f4916d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 21.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b868bc3a0c54ec4ca935ff6f5f4916d, type: 3}
 --- !u!1001 &5454451046405452591
@@ -2730,11 +2725,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Common
-      objectReference: {fileID: 0}
-    - target: {fileID: 6659410603595645455, guid: 37975e4e745d1a54a860fc2c01ecdba6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37975e4e745d1a54a860fc2c01ecdba6, type: 3}
