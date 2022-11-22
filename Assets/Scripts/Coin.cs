@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] GameObject _effectPrefab;
     void Start()
     {
         
@@ -21,5 +21,6 @@ public class Coin : MonoBehaviour
     {
         FindObjectOfType<CoinManager>().AddOne();
         Destroy(gameObject);
+        Instantiate(_effectPrefab, transform.position, transform.rotation); 
     }
 }
