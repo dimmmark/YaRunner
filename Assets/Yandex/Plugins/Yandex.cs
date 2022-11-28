@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
@@ -17,6 +16,9 @@ public class Yandex : MonoBehaviour
     [DllImport("__Internal")]
     private static extern void RateGame();
 
+    [SerializeField] TextMeshProUGUI _nameText;
+    [SerializeField] RawImage _photo;
+
 
     public void RateGameButton()
     {
@@ -28,8 +30,7 @@ public class Yandex : MonoBehaviour
         GiveMePlayerData();
     }
 
-    [SerializeField] TextMeshProUGUI _nameText;
-    [SerializeField] RawImage _photo;
+
 
     public void SetName(string name)
     {

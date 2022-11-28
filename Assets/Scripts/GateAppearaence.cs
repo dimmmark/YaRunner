@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,24 +28,24 @@ public class GateAppearaence : MonoBehaviour
             prefix = "+";
             SetColor(_colorPositive);
         }
-        else if(value == 0)
+        else if (value == 0)
         {
             SetColor(Color.grey);
         }
         else
         {
-           SetColor(_colorNegative);
+            SetColor(_colorNegative);
         }
-        _text.text =prefix + value.ToString();
-            
+        _text.text = prefix + value.ToString();
+
         _expandLable.SetActive(false);
         _shrinkLable.SetActive(false);
         _upLable.SetActive(false);
         _downLable.SetActive(false);
 
-        if(deformationType == DeformationType.Width)
+        if (deformationType == DeformationType.Width)
         {
-            if(value> 0)
+            if (value > 0)
             {
                 _expandLable.SetActive(true);
             }
@@ -56,9 +54,9 @@ public class GateAppearaence : MonoBehaviour
                 _shrinkLable.SetActive(true);
             }
         }
-        else if(deformationType== DeformationType.Height)
+        else if (deformationType == DeformationType.Height)
         {
-            if(value> 0)
+            if (value > 0)
             {
                 _upLable.SetActive(true);
             }
@@ -74,5 +72,5 @@ public class GateAppearaence : MonoBehaviour
             _glassImage.color = new Color(color.r, color.g, color.b, 0.4f);
         }
     }
-    
+
 }

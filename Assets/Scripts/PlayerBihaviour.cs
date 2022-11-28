@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerBihaviour : MonoBehaviour
@@ -9,18 +7,18 @@ public class PlayerBihaviour : MonoBehaviour
     [SerializeField] Animator _animator;
     void Start()
     {
-        _playerMove.enabled= false;
+        _playerMove.enabled = false;
         _preFinishBehavior.enabled = false;
     }
 
     public void Play()
     {
-        _playerMove.enabled= true;
+        _playerMove.enabled = true;
     }
     public void StartPreFinishBehavior()
     {
-        _playerMove.enabled= false;
-        _preFinishBehavior.enabled= true;
+        _playerMove.enabled = false;
+        _preFinishBehavior.enabled = true;
     }
 
     public void StartFinishBehavior()

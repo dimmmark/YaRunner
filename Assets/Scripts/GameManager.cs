@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,9 +15,13 @@ public class GameManager : MonoBehaviour
     }
 
     public void Play()
-    { 
-        _startMenu.SetActive(false); 
-        FindObjectOfType<PlayerBihaviour>().Play();   
+    {
+
+        _startMenu.SetActive(false);
+        FindObjectOfType<PlayerBihaviour>().Play();
+#if UNITY_WEBGL
+        Progress.Instance.Save();
+#endif
     }
     public void ShowFinishWindow()
     {
@@ -28,9 +30,11 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         int next = SceneManager.GetActiveScene().buildIndex + 1;
-        if(next < SceneManager.sceneCountInBuildSettings)
+        if (next < SceneManager.sceneCountInBuildSettings)
         {
             _coinManager.SaveToProgress();
+            Progress.Instance.PlayerInfo.Level = SceneManager.GetActiveScene().buildIndex;
+            Progress.Instance.Save();
             SceneManager.LoadScene(next);
         }
     }

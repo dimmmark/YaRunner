@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Gate : MonoBehaviour
@@ -16,13 +14,13 @@ public class Gate : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         PlayerModifier playerModifier = other.attachedRigidbody.GetComponent<PlayerModifier>();
-        if(playerModifier != null)
+        if (playerModifier != null)
         {
-            if(_deformationType == DeformationType.Height)
+            if (_deformationType == DeformationType.Height)
             {
                 playerModifier.AddHeight(_value);
             }
-            else if(_deformationType!= DeformationType.Height)
+            else if (_deformationType != DeformationType.Height)
             {
                 playerModifier.AddWidth(_value);
             }
